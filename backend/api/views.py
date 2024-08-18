@@ -37,3 +37,7 @@ class NoteDelete(generics.DestroyAPIView):
 class NoteDetailView(generics.RetrieveAPIView):
     queryset = Note.objects.all()
     serializer_class = NoteSerializer
+
+class NoteUpdateView(generics.UpdateAPIView):
+    queryset = Note.objects.all()
+    serializer_class = NoteSerializer
